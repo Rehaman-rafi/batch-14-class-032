@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-Dom</title>
+</head>
+<body>
+    
+     <div id="testdiv">
+        <h2>HELLO WORLD</h2>
+        <b>this is a b tag</b>
+        <p id="testp">This is a p tag</p>
+    </div> 
+    <script>
+        let helement = document.createElement("h1");
+        helement.innerHTML = "HELLO EVERYONE";
+        // document.body.appendChild(helement);
+        document.body.prepend(helement);
+
+        let pelement = document.createElement("p");
+        pelement.innerHTML = "this is another p tag";
+        
+        let testp = document.querySelector("#testp") ;
+        let testdiv = document.querySelector("#testdiv");
+        testdiv.insertBefore(pelement,testp);
+        
+    </script> 
+
+    
+    
+</body>
+</html>
